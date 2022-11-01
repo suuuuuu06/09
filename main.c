@@ -5,18 +5,19 @@
 #define SIZE 5
 int main(void)
 {
-   int i,average,sum=0;
+   int i;
    int grade[SIZE];
+   int score[SIZE];
    
-   for(i=0; i<SIZE; i++)
-   {
-      printf("학생 성적을 입력하세요 : ");
-      scanf("%d",&grade[i]);
-      sum+=grade[i];
-   }
+   for (i=0;i<SIZE;i++)
+      grade[i]=rand() %100;
+	
+	for (i=0;i<SIZE;i++)
+		grade[i]=score[i];
    
-   average=sum/SIZE;
-   printf("성적 평균 : %d\n",average);
+   for (i=0;i<SIZE;i++)
+      printf("score[%d]=%d,grade[%d]=%d\n",i,score[i],i,grade[i]);
    
    return 0;
+      
 }
